@@ -17,20 +17,20 @@ class SinglyLinkedList {
 
     public void insertAtBeginning(int data) {
         Node newNode = new Node(data);
-        newNode.next = head; // Point new node to the current head
-        head = newNode;      // Update head to the new node
+        newNode.next = head; 
+        head = newNode;      
     }
 
     public void insertAtEnd(int data) {
         Node newNode = new Node(data);
         if (head == null) {
-            head = newNode; // If the list is empty, make new node the head
+            head = newNode; 
         } else {
             Node current = head;
             while (current.next != null) {
-                current = current.next; // Traverse to the last node
+                current = current.next; 
             }
-            current.next = newNode; // Link the last node to the new node
+            current.next = newNode; 
         }
     }
 
@@ -39,7 +39,7 @@ class SinglyLinkedList {
             System.out.println("List is empty. No node to delete.");
             return;
         }
-        head = head.next; // Update head to the next node
+        head = head.next;
     }
 
     public void display() {
